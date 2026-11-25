@@ -1,0 +1,56 @@
+{
+  "name": "dsh-moyu",
+  "version": "0.1.0",
+  "description": "A build-log side panel for DeepSeek Harness whose worker-pool grid is a snake game.",
+  "type": "module",
+  "license": "MIT",
+  "author": "dsh-moyu contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/easonandkhalil/dsh-moyu.git"
+  },
+  "homepage": "https://github.com/easonandkhalil/dsh-moyu#readme",
+  "bugs": {
+    "url": "https://github.com/easonandkhalil/dsh-moyu/issues"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "game",
+    "moyu",
+    "break",
+    "snake"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "icon.svg",
+    "cordis.patch.yml",
+    "screenshots.json",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "assets"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

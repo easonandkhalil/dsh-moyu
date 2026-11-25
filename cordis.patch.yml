@@ -1,0 +1,4 @@
+# Bundle rows for dsh-moyu. One client plugin, no host services.
+- insert:
+    - id: dsh-moyu
+      name: dsh-moyu
